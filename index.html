@@ -20,18 +20,8 @@
     --orange: #ff9800;
     --blue: #4a9eff;
   }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Tajawal', sans-serif;
     background: radial-gradient(circle at 20% 0%, var(--bg-1) 0%, var(--bg-2) 55%, var(--bg-3) 100%);
@@ -40,33 +30,23 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  /* ===== Hero Section ===== */
   .hero {
     text-align: center;
     padding: 80px 20px 60px;
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
     background: radial-gradient(circle at 50% 50%, rgba(255,152,0,.08) 0%, transparent 70%);
     animation: pulse 4s ease-in-out infinite;
     pointer-events: none;
   }
-
   @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: .5; }
     50% { transform: scale(1.1); opacity: .8; }
@@ -88,14 +68,12 @@
     z-index: 1;
     border: 1px solid #2a2a4a;
   }
-
   .app-icon {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     display: block;
   }
-
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -144,21 +122,12 @@
     position: relative;
     z-index: 1;
   }
-
   .download-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 50px rgba(255,152,0,.6), 0 6px 16px rgba(0,0,0,.4);
   }
-
-  .download-btn:active {
-    transform: translateY(0) scale(.98);
-  }
-
-  .download-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: #fff;
-  }
+  .download-btn:active { transform: translateY(0) scale(.98); }
+  .download-btn svg { width: 24px; height: 24px; fill: #fff; }
 
   .version-info {
     margin-top: 18px;
@@ -169,11 +138,7 @@
     z-index: 1;
   }
 
-  /* ===== Features Section ===== */
-  .features {
-    padding: 60px 20px;
-  }
-
+  .features { padding: 60px 20px; }
   .section-title {
     text-align: center;
     font-size: 32px;
@@ -190,7 +155,6 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
   }
-
   .feature-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -199,46 +163,22 @@
     text-align: center;
     transition: all .3s;
   }
-
   .feature-card:hover {
     transform: translateY(-5px);
     border-color: rgba(255,152,0,.4);
     box-shadow: 0 12px 32px rgba(255,152,0,.15);
   }
+  .feature-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+  .feature-title { font-size: 18px; font-weight: 800; margin-bottom: 10px; color: var(--text-primary); }
+  .feature-desc { font-size: 14px; color: var(--text-secondary); font-weight: 500; line-height: 1.6; }
 
-  .feature-icon {
-    font-size: 40px;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .feature-title {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-  }
-
-  .feature-desc {
-    font-size: 14px;
-    color: var(--text-secondary);
-    font-weight: 500;
-    line-height: 1.6;
-  }
-
-  /* ===== Screenshots Section ===== */
-  .screenshots {
-    padding: 40px 20px 80px;
-    text-align: center;
-  }
-
+  .screenshots { padding: 40px 20px 80px; text-align: center; }
   .screenshots-placeholder {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
   }
-
   .phone-mock {
     width: 200px;
     height: auto;
@@ -249,28 +189,24 @@
     display: block;
     border: 1px solid var(--card-border);
   }
-
   .phone-mock:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: rgba(74,158,255,.5);
     box-shadow: 0 20px 48px rgba(74,158,255,.2);
   }
 
-  /* ===== Footer ===== */
   footer {
     text-align: center;
     padding: 40px 20px;
     border-top: 1px solid var(--card-border);
     margin-top: 40px;
   }
-
   .footer-support {
     font-size: 14px;
     color: var(--text-secondary);
     font-weight: 600;
     margin-bottom: 20px;
   }
-
   .yt-link {
     display: inline-flex;
     align-items: center;
@@ -284,31 +220,15 @@
     transition: all .3s;
     text-decoration: none;
   }
-
   .yt-link:hover {
     background: rgba(255,0,0,.25);
     transform: scale(1.1);
     box-shadow: 0 0 30px rgba(255,0,0,.3);
   }
+  .yt-link svg { width: 28px; height: 28px; fill: #ff0033; }
+  .copyright { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+  .copyright span { color: var(--orange); font-weight: 800; }
 
-  .yt-link svg {
-    width: 28px;
-    height: 28px;
-    fill: #ff0033;
-  }
-
-  .copyright {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 600;
-  }
-
-  .copyright span {
-    color: var(--orange);
-    font-weight: 800;
-  }
-
-  /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .app-name { font-size: 32px; }
     .app-icon-wrap { width: 120px; height: 120px; padding: 14px; }
@@ -321,7 +241,6 @@
 </head>
 <body>
 
-<!-- Hero Section -->
 <section class="hero">
   <div class="app-icon-wrap">
     <img src="icon.png" alt="JokerDownloader" class="app-icon">
@@ -335,7 +254,6 @@
   <p class="version-info">الإصدار 1.0 • أندرويد 7.0+</p>
 </section>
 
-<!-- Features Section -->
 <section class="features">
   <div class="container">
     <h2 class="section-title">مميزات التطبيق</h2>
@@ -374,19 +292,17 @@
   </div>
 </section>
 
-<!-- Screenshots Section -->
 <section class="screenshots">
   <div class="container">
     <h2 class="section-title">لقطات من التطبيق</h2>
     <div class="screenshots-placeholder">
-      <img src="screen1.png" alt="الشاشة الرئيسية" class="phone-mock">
-      <img src="screen2.png" alt="صفحة التنزيلات" class="phone-mock">
-      <img src="screen3.png" alt="MP3" class="phone-mock">
+      <img src="screen1.jpg" alt="الشاشة الرئيسية" class="phone-mock">
+      <img src="screen2.jpg" alt="صفحة التنزيلات" class="phone-mock">
+      <img src="screen3.jpg" alt="MP3" class="phone-mock">
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <p class="footer-support">لو حابب تدعمني، اشترك في قناتي</p>
   <a href="https://youtube.com/@jokerichpbg?si=avyQ-ePP5I6CnFNp" target="_blank" class="yt-link">
@@ -396,4 +312,4 @@
 </footer>
 
 </body>
-    </html>
+  </html>
