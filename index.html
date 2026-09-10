@@ -72,16 +72,28 @@
     50% { transform: scale(1.1); opacity: .8; }
   }
 
-  .app-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 28px;
+  .app-icon-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 30px;
     margin: 0 auto 24px;
-    display: block;
+    background: linear-gradient(135deg, #1a1a35, #2a1a5e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
     box-shadow: 0 20px 60px rgba(255,152,0,.3), 0 8px 24px rgba(0,0,0,.4);
     animation: float 3s ease-in-out infinite;
     position: relative;
     z-index: 1;
+    border: 1px solid #2a2a4a;
+  }
+
+  .app-icon {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
   }
 
   @keyframes float {
@@ -229,22 +241,19 @@
 
   .phone-mock {
     width: 200px;
-    height: 400px;
-    background: linear-gradient(135deg, var(--card-bg), var(--bg-1));
-    border: 2px solid var(--card-border);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 14px;
-    font-weight: 600;
+    height: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.4);
     transition: all .3s;
+    display: block;
+    border: 1px solid var(--card-border);
   }
 
   .phone-mock:hover {
-    transform: scale(1.03);
+    transform: translateY(-8px) scale(1.02);
     border-color: rgba(74,158,255,.5);
+    box-shadow: 0 20px 48px rgba(74,158,255,.2);
   }
 
   /* ===== Footer ===== */
@@ -302,10 +311,11 @@
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .app-name { font-size: 32px; }
-    .app-icon { width: 100px; height: 100px; }
+    .app-icon-wrap { width: 120px; height: 120px; padding: 14px; }
     .download-btn { padding: 16px 36px; font-size: 18px; }
     .section-title { font-size: 26px; }
     .hero { padding: 60px 20px 40px; }
+    .phone-mock { width: 160px; }
   }
 </style>
 </head>
@@ -313,7 +323,9 @@
 
 <!-- Hero Section -->
 <section class="hero">
-  <img src="https://github.com/Joker20244/JokerDownloader/raw/main/icon.png" alt="JokerDownloader" class="app-icon">
+  <div class="app-icon-wrap">
+    <img src="icon.png" alt="JokerDownloader" class="app-icon">
+  </div>
   <h1 class="app-name">JokerDownloader</h1>
   <p class="app-tagline">حمّل فيديوهات يوتيوب بسهولة<br>MP4 • MP3 • بأي جودة • بسرعة</p>
   <a href="https://github.com/Joker20244/JokerDownloader-Releases/releases/download/v1.0/JokerDownloader.apk" class="download-btn" download>
@@ -367,9 +379,9 @@
   <div class="container">
     <h2 class="section-title">لقطات من التطبيق</h2>
     <div class="screenshots-placeholder">
-      <div class="phone-mock">الشاشة الرئيسية</div>
-      <div class="phone-mock">اختيار الجودة</div>
-      <div class="phone-mock">صفحة التنزيلات</div>
+      <img src="screen1.png" alt="الشاشة الرئيسية" class="phone-mock">
+      <img src="screen2.png" alt="صفحة التنزيلات" class="phone-mock">
+      <img src="screen3.png" alt="MP3" class="phone-mock">
     </div>
   </div>
 </section>
@@ -384,4 +396,4 @@
 </footer>
 
 </body>
-          </html>
+    </html>
